@@ -1,0 +1,15 @@
+# Ignorar dependencias
+node_modules/
+venv/
+
+# Ignorar archivos de entorno
+.env
+.env.local
+
+# Ignorar archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Ignorar outputs de compilación
+dist/
+*.exe
