@@ -17,6 +17,24 @@ html{
     overflow-x: hidden;
 }
 
+section{
+    padding: 2rem 9%;
+}
+
+.btn{
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 5rem;
+    background: #333;
+    color:#fff;
+    padding: .9rem 3.5rem;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+.btn:hover{
+    background: var(--pink);
+}
+
 header{
     position: fixed;
     top:0; left:0; right:0;
@@ -74,6 +92,41 @@ header .fa-bars{
 }
 
 
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(../images/cover_flower.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.home .content{
+    max-width: 50rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    color:#333
+}
+
+.home .content span{
+    font-size: 3.5rem;
+    color: var(--pink);
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+.home .content p{
+    font-size: 1.5rem;
+    color:#f7dede;
+    padding: 1rem 0;
+    line-height: 1.5;
+}
+
+
+
 
 
 
@@ -93,9 +146,38 @@ header .fa-bars{
 
 
 /*media queries*/
+
+
+@media(max-width:1032px){
+    html{
+        font-size: 60%;
+    }
+    header{
+        padding: 2rem;
+
+    }
+}
+
 @media(max-width:991px){
     html{
         font-size: 55%;
+    }
+    header{
+        padding: 2rem;
+
+    }
+    section{
+        padding: 2rem;
+    }
+
+    .home{
+        background-position: left;
+    }
+}
+
+@media(max-width:785px){
+    html{
+        font-size: 45%;
     }
     header{
         padding: 2rem;
@@ -126,6 +208,14 @@ header .fa-bars{
         background: #fff;
         border: .1rem solid rgba(0, 0, 0, .1);
         display: block;
+    }
+
+    .home .content h3{
+        font-size: 5rem;
+    }
+
+    .home .content span{
+        font-size: 2.5rem;
     }
 }
 
