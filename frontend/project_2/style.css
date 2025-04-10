@@ -145,6 +145,37 @@ nav{
     display: none;
 }
 
+header{
+    margin-top: 5rem;
+    padding-inline: 1rem;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+}
+
+header::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: calc(100% - 2rem);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("images/header_1.jpg");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 3rem;
+    z-index: -1;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -194,5 +225,20 @@ nav{
 
     .nav__links a:hover{
         color: var(--primary-color);
+    }
+
+    .nav__links li:last-child{
+        display: none;
+    }
+
+    .nav__btns{
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .nav__btns button{
+        padding: .75rem 2rem;
+        background-color: var(--text-dark);
     }
 }
