@@ -169,6 +169,55 @@ header::before{
     z-index: -1;
 }
 
+.header__container{
+    display: grid;
+}
+
+.header__content{
+    padding: 4rem 1rem;
+}
+
+.header__content p{
+    margin-bottom: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    text-align: center;
+}
+
+.header__content h1{
+    margin-bottom: 2rem;
+    font-size: 4.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 5.5rem;
+    text-align: center;
+}
+
+.header__btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.header__btns .btn{
+    padding: 1rem 2rem;
+}
+
+.header__btns a{
+    padding: 9px 13px;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    background-color: var(--white);
+    border-radius: 100%;
+}
+
+.header__btns a:hover{
+    color:var(--white);
+    background-color: var(--primary-color);
+}
+
 
 
 
@@ -240,5 +289,44 @@ header::before{
     .nav__btns button{
         padding: .75rem 2rem;
         background-color: var(--text-dark);
+    }
+
+    header{
+        margin-top: 0;
+    }
+
+    .header__container{
+        grid-template-columns:
+        minmax(0, 1fr)
+        repeat(5, minmax(0, calc(var(--max-width)/ 5)))
+        minmax(0, 1fr);
+    }
+
+    .header__content{
+        grid-column: 2/4;
+        padding-block: 8rem;
+    }
+
+    .header__content :is(p,h1){
+        text-align: left;
+    }
+
+    .header__btns{
+        justify-content: flex-start;
+    }
+
+    .header__image{
+        grid-column: 4/8;
+        position: relative;
+        isolation: isolate;
+        height: 100%;
+    }
+
+    .header__image img{
+        position: absolute;
+        top: 2rem;
+        left: 0;
+        height: 100%;
+        width: unset;
     }
 }
