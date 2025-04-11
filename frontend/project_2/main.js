@@ -27,9 +27,10 @@ const scrollRevealOption= {
     duration:1000,
 };
 
-
+//Efecto de barrido 
 ScrollReveal().reveal(".header__image img", {
     ...scrollRevealOption,
+    //empieza desde la dercha de la pantalla
     origin: "right",
 });
 
@@ -47,3 +48,10 @@ ScrollReveal().reveal(".header__btns", {
     ...scrollRevealOption,
     delay:1500,
 });
+
+
+ScrollReveal().reveal(".destination__card", {
+    ...scrollRevealOption,
+    interval:500
+});
+

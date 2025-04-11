@@ -232,6 +232,8 @@ header::before{
 .destination__card img{
     border-radius: 1.5rem;
     box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+    height: 90%;
+    width: 100%;
 }
 
 .destination__card__details{
@@ -264,7 +266,7 @@ header::before{
 }
 
 .destination__card:hover .destination__rating{
-    
+    background-color: var(--primary-color-dark);
 }
 
 
@@ -280,6 +282,13 @@ header::before{
 
 
 
+
+
+@media(width > 540px){
+    .destination__grid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
 
 
 @media (width > 768px){
@@ -377,5 +386,9 @@ header::before{
         left: 0;
         height: 100%;
         width: unset;
+    }
+
+    .destination__grid{
+        grid-template-columns: repeat(3,1fr);
     }
 }
