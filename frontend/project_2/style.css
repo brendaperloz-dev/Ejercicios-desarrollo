@@ -381,6 +381,28 @@ header::before{
     border-radius: 5px;
 }
 
+.banner__container{
+    display: grid;
+    gap: 2rem;
+}
+
+.banner__card{
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: var(--extra-light);
+    border-radius: 2rem;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.1);
+}
+
+.banner__card h4{
+    font-size: 5rem;
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+.banner__card p{
+    color: var(--text-light);
+}
 
 
 
@@ -403,6 +425,10 @@ header::before{
     .showcase__container{
         grid-template-columns: repeat(2,1fr);
         align-items: center;
+    }
+
+    .banner__container{
+        grid-template-columns: repeat(2,1fr);
     }
 }
 
@@ -518,5 +544,9 @@ header::before{
 
     .showcase__content{
         grid-column: 2/4;
+    }
+
+    .banner__container{
+        grid-template-columns: repeat(3,1fr);
     }
 }
